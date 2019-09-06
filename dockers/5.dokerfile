@@ -1,0 +1,13 @@
+You can create your own docker images and it can be done with the help of a docker file
+A docker file is a simple text file with instruction
+
+step 1: create a textfile 'Dockerfile'
+step 2: build your docker file using following instruction
+
+#This is a sample Image
+FROM ubuntu
+MAINTAINER amandeepsingh8313@gmail.com
+
+RUN apt-get update
+RUN apt-get install python
+CMD [“echo”,”Image created”]

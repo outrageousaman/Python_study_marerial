@@ -5,15 +5,10 @@ from Assignment_2.message import MessageScheduler, s
 from Assignment_2.logger import logger, log_exception
 
 
-def run_message_scheduler():
+def run_message_scheduler(file_name, schedule_time, body):
     """
     :return:
     """
-    logger.info('starting process')
-    file_name = input('Enter the name of .csv File : ')
-    schedule_time = input('Enter the schedule time in format "yyyy-mm-dd hh:mm AM/PM" : ')
-    body = input('body of the message : ')
-    logger.info(f'file name: {file_name} , tentative run time: {schedule_time}, message body: {body}')
 
     logger.info(f'reading contacts from file {file_name}')
     try:
@@ -33,8 +28,13 @@ def run_message_scheduler():
     logger.info(queued_messages)
     s.run()
     logger.info('Completed Successfully')
-    return queued_messages
+    return {'status': 'Success'}
 
 
 if __name__ == '__main__':
-    run_message_scheduler()
+    logger.info('starting process')
+    filename = input('Enter the name of .csv File : ')
+    scheduletime = input('Enter the schedule time in format "yyyy-mm-dd hh:mm AM/PM" : ')
+    messagebody = input('body of the message : ')
+    logger.info(f'file name: {filename} , tentative run time: {scheduletime}, message body: {messagebody}')
+    run_message_scheduler(filename, scheduletime, messagebody)

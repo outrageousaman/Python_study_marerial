@@ -1,0 +1,21 @@
+2019-09-07 15:26:18,609 - INFO - starting process
+2019-09-07 15:26:45,571 - INFO - file name: customers.csv , tentative run time: 2019-09-07 03:28 PM, message body: this is working
+2019-09-07 15:26:45,571 - INFO - reading contacts from file customers.csv
+2019-09-07 15:26:45,571 - INFO - record =  phone number : +918588849458 country :India
+2019-09-07 15:26:45,571 - INFO - Message for +918588849458 added in queue
+2019-09-07 15:26:45,579 - INFO - record =  phone number : +918076679033 country :India
+2019-09-07 15:26:45,579 - INFO - Message for +918076679033 added in queue
+2019-09-07 15:26:45,579 - INFO - record =  phone number : +919958109241 country :India
+2019-09-07 15:26:45,579 - INFO - Message for +919958109241 added in queue
+2019-09-07 15:26:45,579 - INFO - queued messages
+2019-09-07 15:26:45,579 - INFO - [Event(time=1567850279.579017, priority=1, action=<bound method MessageScheduler.message_sender of <Assignment_2.message.MessageScheduler object at 0x103941358>>, argument=(), kwargs={}), Event(time=1567850279.579416, priority=1, action=<bound method MessageScheduler.message_sender of <Assignment_2.message.MessageScheduler object at 0x104e62a90>>, argument=(), kwargs={}), Event(time=1567850279.5797818, priority=1, action=<bound method MessageScheduler.message_sender of <Assignment_2.message.MessageScheduler object at 0x104e6d4a8>>, argument=(), kwargs={})]
+2019-09-07 15:27:59,592 - DEBUG - Starting new HTTPS connection (1): api.sms-magic.com:443
+2019-09-07 15:28:00,985 - DEBUG - https://api.sms-magic.com:443 "GET /v1/sms/send?mobile_number=+918588849458&sms_text=this%20is%20working&label=labelmarket&sender_id=80019950 HTTP/1.1" 200 105
+2019-09-07 15:28:00,989 - INFO - b'{\n    "status": "submitted",\n    "message": "queued",\n    "id": "1102def8-e2a7-4104-b8e5-8a5512e34c2b"\n}\n'
+2019-09-07 15:28:00,992 - DEBUG - Starting new HTTPS connection (1): api.sms-magic.com:443
+2019-09-07 15:28:02,245 - DEBUG - https://api.sms-magic.com:443 "GET /v1/sms/send?mobile_number=+918076679033&sms_text=this%20is%20working&label=labelmarket&sender_id=80019950 HTTP/1.1" 200 105
+2019-09-07 15:28:02,249 - INFO - b'{\n    "status": "submitted",\n    "message": "queued",\n    "id": "3d39409e-1c97-4eb0-ba04-f7d49ac98e04"\n}\n'
+2019-09-07 15:28:02,252 - DEBUG - Starting new HTTPS connection (1): api.sms-magic.com:443
+2019-09-07 15:28:03,522 - DEBUG - https://api.sms-magic.com:443 "GET /v1/sms/send?mobile_number=+919958109241&sms_text=this%20is%20working&label=labelmarket&sender_id=80019950 HTTP/1.1" 200 105
+2019-09-07 15:28:03,526 - INFO - b'{\n    "status": "submitted",\n    "message": "queued",\n    "id": "e3ffcfe2-e821-4d03-904e-c862598db89e"\n}\n'
+2019-09-07 15:28:03,526 - INFO - Completed Successfully

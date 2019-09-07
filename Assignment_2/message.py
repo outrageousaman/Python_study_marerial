@@ -1,7 +1,11 @@
 import sched
 import time
+import os
+import requests
+
 from Assignment_2.country import CountryDelay
 from Assignment_2.logger import logger, log_exception
+
 
 s = sched.scheduler(time.time, time.sleep)
 
@@ -44,8 +48,18 @@ class MessageScheduler(Message):
         Send the message
         :return: response from sender API
         """
-        print('to : ', self.to)
-        print('body : ', self.body)
+
+        url = os.getenv('url')
+        headers = {
+            'apiKey': os.getenv('apiKey')
+        }
+        payload = f"mobile_number={self.to}&sms_text={self.body}&label=labelmarket&sender_id=80019950"
+        try:
+            response = requests.request("GET", url, headers=headers, params=payload)
+            logger.info(response.content)
+        except Exception as e:
+            logger.error('Exception while sending message ', e)
+            logger.error(log_exception())
 
     def send_message(self):
         """

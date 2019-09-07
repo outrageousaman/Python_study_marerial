@@ -12,7 +12,6 @@ class Country(object):
     """
     def __init__(self, country):
         self.country = country
-        print(self.country)
 
     def get_country_code(self):
         """
@@ -41,7 +40,6 @@ class Country(object):
                 timezones = country_timezones[countrycode]
                 for tz in timezones:
                     timezone_country[countrycode] = tz
-            print(country_code)
             return timezone_country[country_code]
         except (KeyError, ValueError, AttributeError, TypeError) as e:
             logger.error(e)

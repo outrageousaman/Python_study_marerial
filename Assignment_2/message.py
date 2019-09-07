@@ -58,8 +58,7 @@ class MessageScheduler(Message):
         except (AttributeError, ValueError) as e:
             logger.error(e)
             logger.error(log_exception())
-        resp = 'coming soon'
-        print(resp)
+
 
     @staticmethod
     def list_queued_message():

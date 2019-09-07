@@ -1,3 +1,4 @@
 geopy
 tzwhere
 pycountry
+nose
